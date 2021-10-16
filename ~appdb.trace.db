@@ -1,0 +1,6 @@
+2021-10-16 10:53:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TABLE_CUSTOMER" not found; SQL statement:
+select customer0_.id as id1_0_0_, customer0_.create_date as create_d2_0_0_, customer0_.first_name as first_na3_0_0_, customer0_.last_name as last_nam4_0_0_, customer0_.status as status5_0_0_, customer0_.update_date as update_d6_0_0_ from table_customer customer0_ where customer0_.id=? [42102-200]
+2021-10-16 10:55:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TABLE_CUSTOMER" not found; SQL statement:
+select customer0_.id as id1_0_0_, customer0_.create_date as create_d2_0_0_, customer0_.first_name as first_na3_0_0_, customer0_.last_name as last_nam4_0_0_, customer0_.status as status5_0_0_, customer0_.update_date as update_d6_0_0_ from table_customer customer0_ where customer0_.id=? [42102-200]
