@@ -1152,3 +1152,6 @@ Caused by: java.nio.channels.OverlappingFileLockException
 	at java.base/java.nio.channels.FileChannel.tryLock(FileChannel.java:1178)
 	at org.h2.mvstore.FileStore.open(FileStore.java:163)
 	... 28 more
+2021-10-23 11:47:42 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "=[*]TABLE_ADDRESS"; SQL statement:
+=TABLE_ADDRESS [42000-200]

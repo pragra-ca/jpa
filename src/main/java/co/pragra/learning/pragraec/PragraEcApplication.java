@@ -23,23 +23,6 @@ public class PragraEcApplication {
 
         log.info("Customer with id -> {} ", repo.findById(100L));
 
-        Address address
-                = Address.builder()
-                .streetNo(23)
-                .streetName("Wellington")
-                .city("Hamilton")
-                .state("ON")
-                .zip("L8R3J4")
-                .addressType(AddressType.HOME)
-                .build();
-
-        repo.save(Customer.builder().id(1000L)
-                .status(Status.NEW)
-                .createDate(new Date())
-                .updateDate(new Date())
-                .firstName("Nikhil")
-                .address(address)
-                .lastName("Jadav").build());
         log.info("All Customer -> [{}] ", repo.findAll());
     }
 
