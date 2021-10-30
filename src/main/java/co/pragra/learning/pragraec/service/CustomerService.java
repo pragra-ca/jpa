@@ -1,6 +1,7 @@
 package co.pragra.learning.pragraec.service;
 
 import co.pragra.learning.pragraec.dao.CustRepo;
+import co.pragra.learning.pragraec.dto.CustomerDTO;
 import co.pragra.learning.pragraec.entities.Customer;
 import co.pragra.learning.pragraec.entities.Status;
 import lombok.RequiredArgsConstructor;
@@ -14,7 +15,19 @@ import java.util.stream.Collectors;
 @Service
 public class CustomerService {
     private final CustRepo repo;
+    private final CustomerMapper mapper;
 
+    public CustomerDTO addCustomer(CustomerDTO customerDTO){
+        return mapper.toCustomerDTO(repo.save(mapper.toCustomerEntity(customerDTO)));
+    }
+
+    public CustomerDTO updateCustomer(Customer customer){
+        return mapper.toCustomerDTO(repo.save(customer));
+    }
+
+    public void deleteCustomer(long id){
+         repo.deleteById(id);
+    }
 
     public List<Customer> getAllCustomerByStatus(Status status){
         return repo.getAllByStatus(status);
