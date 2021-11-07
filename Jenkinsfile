@@ -1,7 +1,11 @@
 pipeline {
   agent any
+  tools {
+  jdk 'jdk11'
+  maven 'm3'
+  }
   stages {
-    stage('Git Checkout') {
+    stage('Compile') {
       steps {
         sh 'sudo mvn compile'
       }
