@@ -7,7 +7,7 @@ pipeline {
   stages {
     stage('Compile') {
       steps {
-        sh 'sudo mvn compile'
+        sh 'mvn compile'
       }
     }
 
