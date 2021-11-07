@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Git Checkout') {
       steps {
-        sh 'sh \'mvn compile\''
+        sh 'sudo mvn compile'
       }
     }
 
