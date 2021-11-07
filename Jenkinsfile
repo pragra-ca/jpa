@@ -1,5 +1,9 @@
 pipeline {
   agent any
+  tools {
+    jdk 'jdk11'
+    maven 'm3'
+  }
   stages {
     stage('Git Checkout') {
       steps {
@@ -9,7 +13,7 @@ pipeline {
 
     stage('Compile') {
       steps {
-        sh 'sh \'mvn compile\''
+        sh 'mvn compile'
       }
     }
 
